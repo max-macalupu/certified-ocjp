@@ -9,6 +9,7 @@ public class Question_02 {
 
     public static void main(String[] args) {
         try(MyResource myResource = new MyResource();){
+            System.out.println("...");
             throw new RuntimeException();
         } catch (Exception e) {
             System.out.println("Exception...");

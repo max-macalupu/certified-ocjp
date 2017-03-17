@@ -28,5 +28,8 @@ class FactorialTest{
         Future<Long> future = executorService.submit(callableFactorial);
         System.out.print("Value of Factorial: " + future.get().toString());
         executorService.shutdown();
+        System.out.println(5);
+        int a = 0;
+        a++;
     }
 }
