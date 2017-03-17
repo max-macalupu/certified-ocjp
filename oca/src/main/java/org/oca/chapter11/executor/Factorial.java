@@ -16,6 +16,7 @@ public class Factorial implements Callable<Long> {
         long factorial = 1;
         for(long value = 1; value<=n; value++){
             factorial *= value;
+            System.out.println("Thread: " + Thread.currentThread().getName() + ", Factorial: " + factorial);
         }
         return factorial;
     }
@@ -23,8 +24,9 @@ public class Factorial implements Callable<Long> {
 
 class FactorialTest{
     public static void main(String [] args) throws ExecutionException, InterruptedException {
-        Callable<Long> callableFactorial = new Factorial(20);
+        Callable<Long> callableFactorial = new Factorial(50);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
+//        ExecutorService executorService = Executors.newFixedThreadPool(20);
         Future<Long> future = executorService.submit(callableFactorial);
         System.out.print("Value of Factorial: " + future.get().toString());
         executorService.shutdown();
