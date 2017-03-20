@@ -18,10 +18,10 @@ public class Question_16 {
             new Person("jr", Person.Gender.FEMALE)
         );
 
-//        System.out.println(personList.stream().collect(Collectors.toMap(Person::getGender, Person::getName)));
+        System.out.println(personList.stream().collect(Collectors.toMap(Person::getGender, Person::getName)));
 //        Map<Person.Gender, String> data = personList.stream().collect(Collectors.toMap(Person::getGender, Person::getName, (s, s2) -> s));
-        Map<Person.Gender, List<Person>> data = personList.stream().distinct().collect(Collectors.groupingBy(Person::getGender));
-        System.out.println(data);
+//        Map<Person.Gender, List<Person>> data = personList.stream().distinct().collect(Collectors.groupingBy(Person::getGender));
+//        System.out.println(data);
     }
 
 }
