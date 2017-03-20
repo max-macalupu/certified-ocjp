@@ -1,6 +1,5 @@
 package org.oca.mocks.whizlabs.diagnostic;
 
-import javax.swing.text.DateFormatter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,5 +13,4 @@ public class Question_59 {
         DateFormat dateFormat = new SimpleDateFormat("d MMM ''yy");
         System.out.println(dateFormat.format(new Date()));
     }
-
 }
