@@ -26,5 +26,4 @@ public class RawTest1 {
 		for(Iterator<String> itemItr = strList2.iterator(); itemItr.hasNext();)
 			System.out.println(itemItr.next());
 	}
-
 }

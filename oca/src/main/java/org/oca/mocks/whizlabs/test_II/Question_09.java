@@ -21,7 +21,6 @@ public class Question_09 {
         List<Thing_09> thing09sList = Arrays.asList(new Thing_09(), new Thing_09(), new Thing_09(), new Thing_09());
         processList1(carQ09List);
         processList2(thing09sList);
-
     }
 
     public static void processList1(List<? extends Vehicle_Q09> vehicleQ09List){
