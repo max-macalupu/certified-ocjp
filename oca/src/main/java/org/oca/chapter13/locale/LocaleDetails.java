@@ -9,7 +9,7 @@ import java.util.Locale;
 public class LocaleDetails {
 
     public static void main(String[] args) {
-        Locale.setDefault(Locale.CANADA_FRENCH);
+    Locale.setDefault(Locale.CANADA_FRENCH);
         Locale defaultLocale = Locale.getDefault();
 
         System.out.printf("The default locale is: %s", defaultLocale.getDisplayName());
