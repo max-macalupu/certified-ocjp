@@ -1,1 +1,2 @@
 *********************************SUMMARY*****************************
+streams never change the source element of some collections - list
