@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by mx on 9/4/2017.
  */
-public class Question_I {
+public class Question_01 {
     public static void main(String[] args) {
         should_this_method_work_with_static();
     }

@@ -1,2 +1,6 @@
 *********************************SUMMARY*****************************
+*********************SREAMS***************************
 streams never change the source element of some collections - list
+
+**********************FUTURE**************************
+Future get has the time of waiting for a result in the executor service
