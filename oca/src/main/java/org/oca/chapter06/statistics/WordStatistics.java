@@ -12,6 +12,7 @@ public class WordStatistics {
         IntSummaryStatistics intSummaryStatistics = Pattern.compile(" ").
                             splitAsStream(operation_message).
                             mapToInt(word -> word.length()).summaryStatistics();
+        intSummaryStatistics.accept(100);
         System.out.printf("The number of words in the text is: %d %n The total number of lengths is %d %n The short word is %d %n The max word in length is %d",
                             intSummaryStatistics.getCount(), intSummaryStatistics.getSum(), intSummaryStatistics.getMin(), intSummaryStatistics.getMax());
     }
