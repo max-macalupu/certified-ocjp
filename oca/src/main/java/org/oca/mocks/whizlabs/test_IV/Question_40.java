@@ -1,7 +1,5 @@
 package org.oca.mocks.whizlabs.test_IV;
 
-import java.util.function.Function;
-
 /**
  * Created by mx on 18/4/2017.
  */

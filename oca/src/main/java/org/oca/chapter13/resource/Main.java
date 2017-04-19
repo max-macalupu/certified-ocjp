@@ -13,8 +13,12 @@ public class Main {
 
         Locale locale = Locale.getDefault();
         localizedBoxOfficeHits.printMovieDetails(ResourceBundle.getBundle("ResBundle", locale));
-
+//
         Locale _locale = new Locale("it","IT","");
         localizedBoxOfficeHits.printMovieDetails(ResourceBundle.getBundle("ResBundle", _locale));
+
+        Locale __locale = new Locale("it","IT","");
+        ResourceBundle.Control control = ResourceBundle.Control.getControl(ResourceBundle.Control.FORMAT_CLASS);
+        localizedBoxOfficeHits.printMovieDetails(ResourceBundle.getBundle("ResBundle", __locale, control));
     }
 }
