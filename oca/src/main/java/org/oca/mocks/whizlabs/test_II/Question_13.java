@@ -10,13 +10,13 @@ import java.nio.file.*;
 public class Question_13 {
     public static void main(String[] args) throws IOException {
         FileSystem fileSystem = FileSystems.getDefault();
-        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:**{java,*ml}");
+//        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:**{java,*ml}");
 //        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:*.*");
 //        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:**.[java,html,xml]");
-//        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:*.{java,html,xml}");
+        PathMatcher pathMatcher = fileSystem.getPathMatcher("glob:*.{java,html,xml}");
         Path path = Paths.get("_java/MyClass.java");
 //        System.out.println(path!=null?pathMatcher.matches(path):"Empty");
-        listAndShowAllTreeDirectory("C:/Users/max.macalupu/Documents/ws/local/oca", pathMatcher);
+        listAndShowAllTreeDirectory("C:/Users/mx/ws/github/oca/code/oca/oca/oca", pathMatcher);
     }
 
     private static void listAndShowAllTreeDirectory(String directoryPath, PathMatcher pathMatcher) throws IOException {

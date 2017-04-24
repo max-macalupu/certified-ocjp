@@ -13,14 +13,18 @@ public class Question_09 {
         Vehicle_Q09 vehicle_q09 = new Car_Q09();
         List<? extends Vehicle_Q09> list1 = new ArrayList<>();
         List<? super Vehicle_Q09> list2 = new ArrayList<>();
+//        list1.add(new Car_Q09());
 //        list1.addAll(Arrays.new Car_Q09());
 //        list2.add(new Car_Q09());
         processList1(list1);
 
         List<Car_Q09> carQ09List = Arrays.asList(new Car_Q09(), new Car_Q09(), new Car_Q09(), new Car_Q09());
         List<Thing_09> thing09sList = Arrays.asList(new Thing_09(), new Thing_09(), new Thing_09(), new Thing_09());
+        List<Object> objectList = Arrays.asList(new Integer(1), new Double(4));
         processList1(carQ09List);
+//        processList1(objectList);
         processList2(thing09sList);
+        processList2(objectList);
     }
 
     public static void processList1(List<? extends Vehicle_Q09> vehicleQ09List){
@@ -33,6 +37,9 @@ public class Question_09 {
         for(Object vehicle_q09: vehicleQ09List){
             System.out.println(vehicle_q09);
         }
+//        for(Thing_09 thing_09: vehicleQ09List){
+//            System.out.println(thing_09);
+//        }
     }
 }
 

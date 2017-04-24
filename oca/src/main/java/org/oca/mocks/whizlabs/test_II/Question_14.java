@@ -11,8 +11,11 @@ public class Question_14 {
 
     public static void main(String[] args) throws IOException {
         MyFileVisitor_Q14 myFileVisitorQ14 = new MyFileVisitor_Q14();
-        Files.walkFileTree(Paths.get("c:/Users/mx/ws/github/oca/code/oca/oca/oca/"), myFileVisitorQ14);
+        Path path = Paths.get(".");
+        System.out.println(path.toAbsolutePath());
+        Files.walkFileTree(path, myFileVisitorQ14);
         System.out.println(myFileVisitorQ14.count);
+        System.out.println(myFileVisitorQ14.countFile);
     }
 
 }
@@ -22,6 +25,7 @@ class MyFileVisitor_Q14 implements FileVisitor<Path>{
     private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**/src*");
 //    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**{java,*ml}");
     int count = 0 ;
+    int countFile = 0;
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
@@ -30,11 +34,8 @@ class MyFileVisitor_Q14 implements FileVisitor<Path>{
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        if(pathMatcher.matches(file)){
-            return FileVisitResult.CONTINUE.CONTINUE;
-        }else{
-            return FileVisitResult.SKIP_SUBTREE;
-        }
+        countFile ++ ;
+        return FileVisitResult.CONTINUE;
     }
 
     @Override
@@ -44,7 +45,11 @@ class MyFileVisitor_Q14 implements FileVisitor<Path>{
 
     @Override
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-        count++;
-        return FileVisitResult.CONTINUE;
+        if(pathMatcher.matches(dir)){
+            System.out.println(dir.toAbsolutePath());
+            return FileVisitResult.CONTINUE.CONTINUE;
+        }else{
+            return FileVisitResult.SKIP_SUBTREE;
+        }
     }
 }
