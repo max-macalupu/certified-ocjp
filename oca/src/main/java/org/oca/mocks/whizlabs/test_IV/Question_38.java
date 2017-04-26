@@ -15,3 +15,15 @@ public class Question_38 {
         System.out.println(t.apply(1));
     }
 }
+
+interface testInterface{
+    void method(Integer a);
+}
+
+class Test_Q38 implements testInterface{
+
+    @Override
+    public void method(Integer a) {
+
+    }
+}

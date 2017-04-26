@@ -48,8 +48,8 @@ class TaskActionThread extends RecursiveTask<Integer>{
             TaskActionThread task1 = new TaskActionThread(Arrays.copyOfRange(array, 0, middle));
             TaskActionThread task2 = new TaskActionThread(Arrays.copyOfRange(array, middle, array.length));
             task1.fork();
-            int secondResult = task2.compute();
             int firstResult = task1.join();
+            int secondResult = task2.compute();
             return firstResult + secondResult;
         }
     }

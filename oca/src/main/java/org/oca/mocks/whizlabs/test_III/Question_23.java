@@ -18,7 +18,7 @@ public class Question_23 {
 
 
     private static void processThisMethodWithAsleep() throws IOException {
-        Path path = Paths.get("jquery.jsss");
+        Path path = Paths.get("jquery.jssss");
         try(BufferedWriter bufferedReader = Files.newBufferedWriter(path, StandardOpenOption.DSYNC);){
             bufferedReader.write("tedsadasdasdsast");
         }
