@@ -13,27 +13,35 @@ public class Question_17 {
     }
 
     private static void process_this_method() throws IOException {
-        Files.walkFileTree(Paths.get("."), new FileVisitor_Q17());
+        FileVisitor_Q17 fileVisitor_q17 = new FileVisitor_Q17();
+        Files.walkFileTree(Paths.get(".").toAbsolutePath(), fileVisitor_q17);
+        System.out.println(fileVisitor_q17.count);
+        System.out.println(fileVisitor_q17.countMatcher);
     }
 }
 
 class FileVisitor_Q17 implements FileVisitor<Path>{
-    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("ab?");
+//    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:ab*");
+//    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("ab?");
     int count = 0;
-//    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**");
+    int countMatcher = 0;
+    private PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:**ab\\\\**");
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+        System.out.println(dir.toAbsolutePath());
+//        System.out.println(dir.getParent());
         if(pathMatcher.matches(dir)){
+            countMatcher ++ ;
             return FileVisitResult.CONTINUE;
         }else{
-            return FileVisitResult.SKIP_SUBTREE;
+//            return FileVisitResult.SKIP_SUBTREE;
+            return FileVisitResult.CONTINUE;
         }
     }
 
     @Override
-    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        count++;
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {count++;
         return FileVisitResult.CONTINUE;
     }
 

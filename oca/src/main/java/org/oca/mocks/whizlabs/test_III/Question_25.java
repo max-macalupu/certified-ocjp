@@ -13,6 +13,6 @@ public class Question_25 {
     }
 
     private static void process_this_insane_method() throws IOException {
-        Files.find(Paths.get("."), Integer.MAX_VALUE, (p,a) -> p.endsWith(".txt")).map(p-> p.toAbsolutePath()).forEach(System.out::println);
+        Files.find(Paths.get("E:\\\\data\\\\"), Integer.MAX_VALUE, (p,a) -> p.endsWith("aa.java")).map(p-> p.toAbsolutePath()).forEach(System.out::println);
     }
 }
