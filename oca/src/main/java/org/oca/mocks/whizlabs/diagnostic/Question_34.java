@@ -23,7 +23,8 @@ public class Question_34 {
         Map<StaffMember.Gender, Map<StaffMember.Facultad, List<StaffMember>>> fullMapWithData = null;
 
         fullMapWithData = staffMemberList.stream().collect(Collectors.groupingBy(StaffMember::getGender, Collectors.groupingBy(StaffMember::getFacultad)));
-
+        System.out.println(fullMapWithData);
+        fullMapWithData = staffMemberList.stream().collect(Collectors.groupingBy(data -> data.getGender(), Collectors.groupingBy(data -> data.getFacultad())));
         System.out.println(fullMapWithData);
     }
 }

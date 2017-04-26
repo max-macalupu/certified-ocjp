@@ -15,8 +15,10 @@ public class Question_26 {
 //        int sumZero = listIntegerOne.stream().mapToDouble((a) -> a).sum();
         double sumOne = listIntegerOne.stream().mapToDouble((a) -> a).sum();
         double sumTwo = listIntegerTwo.stream().mapToInt(z-> z).sum();
+        double sum = listIntegerOne.stream().reduce(0, (x,y) -> x+y);
 
-        System.out.println(sumOne + "  " +sumTwo);
+
+        System.out.println(sumOne + "  " +sumTwo+ " " + sum);
 
     }
 

@@ -11,6 +11,9 @@ public class Question_07 {
         List<? super Number> listOfNumber = new ArrayList<>();
         List<? extends Number> list2 = new ArrayList<>();
         listOfNumber.add(1);
+        Number number = 1;
+        listOfNumber.add(number);
+//        list2.add(new Integer(1));
 //        list2.add(new Object(null));
     }
 }

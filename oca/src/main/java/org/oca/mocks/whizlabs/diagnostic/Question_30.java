@@ -15,6 +15,8 @@ public class Question_30 {
         Optional<?> optional = listOfSets.stream().flatMap( stream -> stream.stream()).reduce(Integer::sum);
 
         System.out.println(optional.get());
+        System.out.println();
+        System.out.println(listOfSets.stream().flatMap( stream -> stream.stream().map(x -> x*x)).distinct().peek(System.out::println).count());
 
     }
 }
