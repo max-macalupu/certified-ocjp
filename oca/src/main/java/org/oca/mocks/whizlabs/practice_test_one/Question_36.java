@@ -11,11 +11,12 @@ public class Question_36 {
 
     public static void main(String[] args) {
 
-        String text = "word";
-        text = text.toUpperCase();
+        String text = null;
+//        text += ".";
+//        text = text.toUpperCase();
 
-//        UnaryOperator<String> unaryOperator = x -> x.concat(text);
-        UnaryOperator<String> unaryOperator = x -> x.concat(text2);
+        UnaryOperator<String> unaryOperator = x -> x.concat(text);
+//        UnaryOperator<String> unaryOperator = x -> x.concat(text2);
         System.out.println(unaryOperator.apply(text));
 
     }

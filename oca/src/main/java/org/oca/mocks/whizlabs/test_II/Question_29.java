@@ -16,6 +16,8 @@ public class Question_29 {
         lorienQ29List.stream().sorted(Lorien_Q29::compareTo).forEach(System.out::print);
         System.out.println();
         lorienQ29List.stream().sorted(Comparator.comparing(lorien_q29 -> lorien_q29.getName())).forEach(System.out::print);
+        System.out.println();
+//        lorienQ29List.stream().sorted(MyComparator::compare);
     }
 }
 

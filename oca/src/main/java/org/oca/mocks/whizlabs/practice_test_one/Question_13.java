@@ -12,7 +12,7 @@ import java.nio.file.StandardCopyOption;
 public class Question_13 {
     public static void main(String[] args) throws IOException {
 
-        Path path1 = Paths.get("log.txt");
+        Path path1 = Paths.get("jquery.js");
         Files.move(path1, Paths.get("filename.zip"), StandardCopyOption.ATOMIC_MOVE);
 
     }

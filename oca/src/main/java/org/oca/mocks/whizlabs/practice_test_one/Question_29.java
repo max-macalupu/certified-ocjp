@@ -11,7 +11,9 @@ import java.util.stream.Stream;
 public class Question_29 {
     public static void main(String[] args) {
         List<String> stringList = Arrays.asList("one", "two", "three");
+        List<String> stringList2 = Arrays.asList("one", "two", "three");
         List<Integer> integerList = Arrays.asList(1, 5, 6, 7);
-        Stream.of(stringList, integerList).flatMap(e -> Stream.of(e)).forEach(System.out::println);
+        Stream.of(stringList, stringList2, integerList).flatMap(e -> Stream.of(e)).forEach(System.out::println);
+        Stream.of(stringList, integerList).flatMap(e -> e.stream()).forEach(System.out::println);
     }
 }

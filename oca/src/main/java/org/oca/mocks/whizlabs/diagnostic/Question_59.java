@@ -11,6 +11,6 @@ public class Question_59 {
 
     public static void main(String[] args) {
         DateFormat dateFormat = new SimpleDateFormat("d MMM ''yy");
-        System.out.println(dateFormat.format(new Date()));
+        System.out.println(dateFormat.format(new Date(0)));
     }
 }

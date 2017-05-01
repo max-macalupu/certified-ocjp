@@ -17,7 +17,7 @@ public class Question_19 {
                 WatchEvent.Kind<?> kind = watchEvent.kind();
                 System.out.println(watchEvent.context() + " " + kind.name());
             }
-            watchKey.reset();
+//            watchKey.reset();
         }
     }
 }
