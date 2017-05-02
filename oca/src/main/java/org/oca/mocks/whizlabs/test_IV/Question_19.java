@@ -11,7 +11,8 @@ public class Question_19 {
 
     public static void main(String[] args) throws IOException {
         FileVisitor fileVisitor = new FileVisitorFor_Q19();
-        Files.walkFileTree(Paths.get("E:\\data"), fileVisitor);
+//        Files.walkFileTree(Paths.get("E:\\data"), fileVisitor);
+        Files.walkFileTree(Paths.get("."), fileVisitor);
     }
 
     private static final class FileVisitorFor_Q19 extends SimpleFileVisitor<Path>{
