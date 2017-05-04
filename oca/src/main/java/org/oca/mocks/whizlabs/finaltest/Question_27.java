@@ -3,7 +3,6 @@ package org.oca.mocks.whizlabs.finaltest;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by mx on 29/4/2017.
@@ -23,6 +22,15 @@ public class Question_27 {
         for(WatchEvent watchEvent: watchKeyList){
 
         }
+    }
+}
+
+class Test_Q{
+    private final PathMatcher pathMatcher;
+
+
+    public Test_Q(PathMatcher pathMatcher) {
+        this.pathMatcher = pathMatcher;
     }
 }
 
