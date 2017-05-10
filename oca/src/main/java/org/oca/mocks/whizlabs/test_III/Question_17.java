@@ -14,7 +14,7 @@ public class Question_17 {
 
     private static void process_this_method() throws IOException {
         FileVisitor_Q17 fileVisitor_q17 = new FileVisitor_Q17();
-        Files.walkFileTree(Paths.get(".").toAbsolutePath(), fileVisitor_q17);
+        Files.walkFileTree(Paths.get("d:\\data").toAbsolutePath(), fileVisitor_q17);
         System.out.println(fileVisitor_q17.count);
         System.out.println(fileVisitor_q17.countMatcher);
     }

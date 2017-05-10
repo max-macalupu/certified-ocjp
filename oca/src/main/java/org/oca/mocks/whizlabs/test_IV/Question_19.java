@@ -11,16 +11,18 @@ public class Question_19 {
 
     public static void main(String[] args) throws IOException {
         FileVisitor fileVisitor = new FileVisitorFor_Q19();
-//        Files.walkFileTree(Paths.get("E:\\data"), fileVisitor);
-        Files.walkFileTree(Paths.get("."), fileVisitor);
+        Files.walkFileTree(Paths.get("d:\\data"), fileVisitor);
+//        Files.walkFileTree(Paths.get("."), fileVisitor);
+//        System.out.println(fileVisitor.);
     }
 
     private static final class FileVisitorFor_Q19 extends SimpleFileVisitor<Path>{
         PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher("glob:*.java");
 
         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException{
-//            System.out.println(file.toAbsolutePath());
-            if(pathMatcher.matches(file.getFileName())){
+            System.out.println(file);
+            if(pathMatcher.matches(file)){
+//            if(pathMatcher.matches(file.getFileName())){
                 System.out.println(file.toAbsolutePath());
             }
             return FileVisitResult.CONTINUE;

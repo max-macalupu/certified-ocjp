@@ -11,12 +11,13 @@ public class Question_58 {
         Merge_Q58 merge_q58 = new Merge_Q58();
         CyclicBarrier cyclicBarrier = new CyclicBarrier(2, merge_q58);
         ItemProcessor_Q58 itemProcessor_q58 = new ItemProcessor_Q58(cyclicBarrier);
-//        itemProcessor_q58.start();
+        itemProcessor_q58.start();
         cyclicBarrier.await();
     }
 }
 
-class ItemProcessor_Q58 implements Runnable{
+//class ItemProcessor_Q58 implements Runnable{
+class ItemProcessor_Q58 extends Thread{
     CyclicBarrier cyclicBarrier;
     public ItemProcessor_Q58(CyclicBarrier cyclicBarrier){
         this.cyclicBarrier = cyclicBarrier;
